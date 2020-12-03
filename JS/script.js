@@ -10,7 +10,7 @@ $('.decor').submit(function validate_form() {
 	let specialty = document.getElementById('sp_input').value;
 	let email = document.getElementById('em_input').value;
 
-    if (st_exp.test(student) == false && student != '')
+    if (st_exp.test(student) == false && student != '' || student.match(/[\!-\@]|[\[-\`]|[\{-\~]/))
 	{
 		$('#message').html('Виникла помилка:</br>Ім\'я повинно бути введене українськими літерами');
 		return false;
