@@ -1,8 +1,8 @@
 $('.decor').submit(function validate_form() {
     var msg = $('.decor').serialize();
 
-    let st_exp = /^[А-Яа-яІі\s]+/;
-	let gr_exp = /^[А-Яа-яІі]{2,2}\-[0-9]/;
+    let st_exp = /^[А-Яа-яІі\s]+$/;
+	let gr_exp = /^[А-Яа-яІі]{2,2}\-[0-9][0-9]$/;
 	let sp_exp = /^\d{3,3}$/;
 	let em_exp = /^[a-z0-9._-]+\@[a-z0-9]+\.[a-z]{2,4}$/;
 	let student = document.getElementById('st_input').value;
@@ -10,7 +10,7 @@ $('.decor').submit(function validate_form() {
 	let specialty = document.getElementById('sp_input').value;
 	let email = document.getElementById('em_input').value;
 
-    if (st_exp.test(student) == false && student != '' || student.match(/[\!-\@]|[\[-\`]|[\{-\~]/))
+    if (st_exp.test(student) == false && student != '')
 	{
 		$('#message').html('Виникла помилка:</br>Ім\'я повинно бути введене українськими літерами');
 		return false;
