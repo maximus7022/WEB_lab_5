@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Форма</title>
+		<link rel="shortcut icon" href="IMAGES/IPT_LOGO.png" type="image/png">
+
+		<link rel = "stylesheet" href = "STYLE/form.css">
+		<script type="text/javascript" src="JS/PLUGINS/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="JS/PLUGINS/jquery.validate.js"></script>	
+	</head>
+
+	<body>
+		<form class="decor">
+			<div class="form-inner">
+    			<h3 align="center" id="message">Якщо ти випускник Фізтеху і хочеш бачити себе на сайті - <p>ЗАПОВНЮЙ ФОРМУ</h3>
+
+		    	<input id="st_input" name="student" type="text" placeholder="ПІБ">
+		    	<input id="gr_input" name="group" type="text" placeholder="Група">
+		    	<input id="date_input" name="birthday" type="number" placeholder="Рік Народження">
+		    	<input id="sp_input" name="specialty" placeholder="Спеціальність(№)">
+		    	<input id="em_input" name="email" placeholder="Email">
+				
+		    	<input type="submit" value="Надіслати">
+
+		    	<a href="index.html" id="button">На головну</a>
+		    	<a align="center" id="pop_button" href="#overlay">Допомога</a>
+		    	<input type="reset" align="center" id="update_button" value="Очистити ввід">
+
+				<div id="overlay">
+					<div class="popup">
+						<h2>На цій сторінці потрібно заповнити форму</h2>
+						<a class="close" href="#">&times;</a>
+						<div class="content">
+							ПІБ - українськими літерами, ГРУПА приклад:"ФБ-95", РІК (1961-2002), СПЕЦІАЛЬНІСТЬ, EMAIL.
+						</div>
+					</div>
+				</div>
+  			</div>
+		</form>
+
+		<script type="text/javascript" src="JS/script.js"></script>
+	</body>
+</html>
